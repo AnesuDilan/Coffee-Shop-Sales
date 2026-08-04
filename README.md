@@ -2,87 +2,84 @@
 
 ## 📌 Project Overview
 
-This project is an end-to-end sales performance analysis of a coffee shop chain using **Microsoft SQL Server** and **Power BI**. The objective was to transform raw transactional sales data into actionable business insights that support data-driven decision-making.
+This project is an end-to-end business intelligence solution that analyzes transactional sales data from a coffee shop chain using **Microsoft SQL Server** and **Power BI**.
 
-The project follows the complete analytics lifecycle, from data cleaning and exploration in SQL to interactive dashboard development in Power BI, demonstrating both technical SQL skills and business analysis capabilities.
+The objective was to transform raw sales data into meaningful business insights that support operational and strategic decision-making. The project demonstrates the complete analytics workflow, including data cleaning, exploratory data analysis, business analysis, and interactive dashboard development.
 
 ---
 
 # 🎯 Business Problem
 
-The coffee shop chain processes thousands of sales transactions; however, management lacked a centralized view of business performance across stores, products, and time periods.
+The coffee shop chain processed thousands of sales transactions across multiple store locations but lacked a centralized reporting solution to monitor business performance.
 
-Without meaningful reporting, the business faced several operational challenges:
+Without clear visibility into sales trends and customer purchasing behaviour, management faced several operational challenges:
 
-- Long customer queues caused by difficulty identifying peak trading hours for staff scheduling.
-- Inefficient inventory distribution due to limited visibility into product demand across different store locations.
-- No clear understanding of which stores generated the highest revenue or transaction volume.
-- Limited insight into product performance, making it difficult to identify best-selling and underperforming items.
-- Lack of visibility into monthly sales trends, reducing the ability to monitor business growth and seasonality.
+- Difficulty identifying peak trading hours, resulting in inefficient staff scheduling and longer customer queues.
+- Ineffective inventory allocation due to limited insight into product demand at different store locations.
+- Limited visibility into product performance, making it difficult to identify best-selling and underperforming items.
+- No centralized reporting to monitor monthly sales performance and support business planning.
 
-As a result, many operational decisions were based on assumptions rather than data.
+As a result, many operational decisions relied on assumptions rather than data.
 
 ---
 
 # 🎯 Project Objective
 
-The goal of this project was to analyze transactional sales data and provide actionable insights that could help management improve operational efficiency and business performance.
+The objective of this project was to analyze transactional sales data and provide actionable insights that help management make informed business decisions.
 
-The analysis focuses on answering questions such as:
+The analysis focuses on answering key business questions, including:
 
 - Which stores generate the highest revenue?
-- Which products contribute the most to sales?
+- Which products contribute most to overall sales?
 - When are the busiest trading hours?
 - How do sales change over time?
-- Which product categories perform best at different store locations?
+- Which product categories perform best across different store locations?
 
 ---
 
-# 🛠️ Solution
+# 🛠️ Project Solution
 
-A structured data analysis workflow was followed to convert raw sales transactions into meaningful business insights.
+A structured analytics workflow was followed to convert raw transaction data into business insights.
 
-## 1. Data Preparation
+## 1. Data Preparation (SQL Server)
 
-The dataset was cleaned and validated using SQL Server by:
+The dataset was cleaned and prepared by:
 
 - Checking for missing (NULL) values
 - Identifying duplicate records
-- Validating transaction quantities and prices
-- Creating a calculated Revenue column
-- Creating additional time-based columns including:
+- Validating transaction quantities and unit prices
+- Creating a calculated **Revenue** column
+- Creating additional date and time attributes including:
   - Month Name
   - Month Number
   - Day Name
   - Hour of Day
   - Time Period (Morning, Afternoon, Evening)
 
-These transformations prepared the dataset for efficient business analysis.
+These transformations prepared the data for efficient reporting and analysis.
 
 ---
 
 ## 2. Exploratory Data Analysis (EDA)
 
-Before answering business questions, the dataset was explored to understand its overall structure and quality.
+The dataset was explored to better understand its structure before conducting business analysis.
 
 The exploration included:
 
-- Total number of transactions
-- Date range covered
+- Total transactions
 - Revenue statistics
-- Quantity statistics
+- Product categories and product types
 - Store locations
-- Product categories
-- Product types
-- Product distribution
+- Quantity statistics
+- Sales date range
 
-This ensured that the data was reliable before performing deeper analysis.
+This ensured the data was accurate and suitable for further analysis.
 
 ---
 
 ## 3. Business Analysis
 
-SQL was used to answer key business questions related to:
+SQL was used to answer business-critical questions related to:
 
 ### 📈 Sales Performance
 
@@ -99,27 +96,61 @@ SQL was used to answer key business questions related to:
 - Revenue by Time Period
 - Customer Purchasing Patterns
 
-### 🏪 Store Performance
+### ☕ Product Performance
 
-- Highest Performing Store
-- Store Revenue Comparison
-- Transaction Volume by Store
-- Monthly Store Performance
-
-### ☕ Product Analysis
-
-- Best Selling Products
-- Lowest Performing Products
+- Top-Selling Products
+- Lowest-Performing Products
 - Revenue by Product Category
 - Revenue by Product Type
+- Product Performance by Store
 
-### 📊 Store vs Product Analysis
+Advanced SQL concepts including **Common Table Expressions (CTEs)** and **Window Functions** were used to perform ranking, aggregation, and comparative analysis.
 
-- Best Selling Categories per Store
-- Product Demand by Store
-- Product Mix Analysis
+---
 
-Advanced SQL concepts including **Common Table Expressions (CTEs)** and **Window Functions** were used to solve more complex analytical problems such as ranking store performance and identifying top-performing product categories.
+# 📊 Power BI Dashboard
+
+The SQL analysis was used to develop an interactive Power BI dashboard consisting of three report pages.
+
+### 📌 Executive Overview
+
+Provides a high-level summary of business performance through:
+
+- Key Performance Indicators (KPIs)
+- Monthly Sales Trend
+- Revenue by Store
+- Revenue by Product Category
+- Interactive slicers
+
+---
+
+### ☕ Product Performance
+
+Analyzes product demand and inventory performance through:
+
+- Top 10 Products
+- Bottom 10 Products
+- Revenue by Product Type
+- Revenue by Product Category
+- Store vs Product Category Heatmap
+
+---
+
+### ⏰ Time Analysis
+
+Identifies customer purchasing behaviour and peak trading periods through:
+
+- Revenue by Hour
+- Transactions by Hour
+- Revenue by Day of Week
+- Revenue by Time Period
+- Hourly Revenue Heatmap
+
+---
+
+## 📸 Dashboard Preview
+
+> Dashboard screenshots will be added after completing the final dashboard design.
 
 ---
 
@@ -131,73 +162,254 @@ Advanced SQL concepts including **Common Table Expressions (CTEs)** and **Window
 
 ---
 
-# 🧠 SQL Skills Demonstrated
+# 🧠 Technical Skills Demonstrated
 
-- SELECT Statements
-- WHERE Clause
-- ORDER BY
-- GROUP BY
-- Aggregate Functions
-- CASE Statements
-- Common Table Expressions (CTEs)
-- Window Functions
-- ROW_NUMBER()
-- PARTITION BY
-- COUNT(DISTINCT)
+### SQL
+
 - Data Cleaning
 - Exploratory Data Analysis
 - Business Analysis
+- Aggregate Functions
+- CASE Statements
+- GROUP BY
+- ORDER BY
+- Common Table Expressions (CTEs)
+- Window Functions
+- ROW_NUMBER()
+- COUNT(DISTINCT)
+
+### Power BI
+
+- Data Modeling
+- DAX Measures
+- Interactive Dashboards
+- KPI Reporting
+- Slicers & Filters
+- Matrix Heatmaps
+- Data Visualization
 
 ---
 
-# 📈 Power BI Dashboard
+# 💡 Key Business Insights
 
-The SQL analysis serves as the foundation for an interactive Power BI dashboard that enables stakeholders to monitor business performance in real time.
+The analysis revealed several valuable insights that can support operational decision-making:
 
-The dashboard includes:
-
-- Executive Sales Overview
-- Sales Trends
-- Store Performance
-- Product Performance
-- Peak Trading Hours
-- Interactive Filters and Slicers
-
-> Dashboard screenshots will be added after completing the Power BI development phase.
+- Identified peak trading periods to improve staff scheduling and reduce customer waiting times.
+- Highlighted high-performing products and categories to support inventory planning.
+- Compared store performance to identify opportunities for operational improvement.
+- Revealed monthly sales trends to assist with forecasting and business planning.
+- Provided an interactive reporting solution that enables management to monitor business performance in real time.
 
 ---
 
-# 💡 Business Impact
+# 📈 Business Impact
 
-The insights generated from this analysis can help management make more informed operational decisions by:
+The dashboard enables management to make more informed decisions by:
 
-- Optimizing staff scheduling during peak trading hours to reduce customer waiting times.
-- Improving inventory allocation based on product demand at each store.
-- Identifying high-performing stores and benchmarking best practices.
-- Monitoring monthly sales trends to support forecasting and business planning.
-- Identifying underperforming products for promotional campaigns or product rationalization.
-- Supporting strategic decision-making through data rather than assumptions.
+- Optimizing staff allocation during busy trading periods.
+- Improving inventory distribution based on product demand.
+- Monitoring sales performance across stores.
+- Identifying opportunities to promote underperforming products.
+- Supporting data-driven business planning through interactive reporting.
 
 ---
 
 
-# 🚀 Future Improvements
 
-Future enhancements to this project include:
+# 🚀 Future Enhancements
 
-- Sales forecasting using Power BI
-- Customer segmentation analysis
-- Inventory optimization recommendations
+Potential improvements include:
+
+- Sales forecasting
+- Customer segmentation
+- Inventory optimization
 - Profitability analysis by product category
-- Interactive KPI monitoring dashboard
+- Time-series trend forecasting
+- Executive KPI scorecards
 
 ---
 
-# 👨‍💻 Author
+# 📊 Power BI Dashboard
 
-**Dilan Mtume**
+The SQL analysis was used to develop an interactive Power BI dashboard consisting of three report pages. Each dashboard was designed to answer a specific business problem and support operational decision-making.
 
-Information Systems Student | Aspiring Data Analyst
+---
 
-Passionate about transforming raw data into actionable business insights through SQL, Power BI, and data visualization.
+# 📌 Executive Overview
 
+The Executive Overview provides management with a high-level summary of overall business performance through key performance indicators and sales trends.
+
+### Dashboard Features
+
+- Total Revenue
+- Total Transactions
+- Total Products Sold
+- Average Transaction Value
+- Revenue by Store
+- Monthly Revenue Trend
+- Revenue by Product Category
+- Interactive Slicers
+
+### Business Insights & Value
+
+#### 💰 Total Revenue
+**Insight:** Displays the total revenue generated during the reporting period.
+
+**Business Value:** Helps management monitor overall business performance, evaluate whether revenue targets are being achieved, and compare performance across different reporting periods.
+
+---
+
+#### 🧾 Total Transactions
+**Insight:** Shows the total number of customer purchases.
+
+**Business Value:** Indicates overall customer traffic and helps determine whether changes in revenue are driven by increased customer visits or higher customer spending.
+
+---
+
+#### 📦 Total Products Sold
+**Insight:** Measures the total quantity of products sold.
+
+**Business Value:** Supports inventory planning by helping management estimate product demand and schedule stock replenishment.
+
+---
+
+#### 💵 Average Transaction Value
+**Insight:** Shows the average amount spent per customer transaction.
+
+**Business Value:** Helps evaluate customer purchasing behaviour and assess opportunities for upselling, pricing strategies, and promotional campaigns.
+
+---
+
+#### 📈 Monthly Revenue Trend
+**Insight:** Tracks revenue performance over time.
+
+**Business Value:** Identifies seasonal patterns, growth trends, and periods of declining sales to support forecasting and business planning.
+
+---
+
+#### 🏪 Revenue by Store
+**Insight:** Compares revenue generated by each store location.
+
+**Business Value:** Identifies high-performing and underperforming stores, enabling management to benchmark performance and allocate resources more effectively.
+
+---
+
+#### ☕ Revenue by Product Category
+**Insight:** Shows which product categories contribute the most to overall revenue.
+
+**Business Value:** Helps prioritize inventory investment and marketing efforts toward the highest-performing product categories.
+
+---
+
+# ☕ Product Performance
+
+The Product Performance dashboard focuses on product demand and sales performance to support inventory management and merchandising decisions.
+
+### Dashboard Features
+
+- Top 10 Best-Selling Products
+- Bottom 10 Products
+- Revenue by Product Type
+- Revenue by Product Category
+- Store vs Product Category Heatmap
+
+### Business Insights & Value
+
+#### 🏆 Top 10 Products
+**Insight:** Identifies the products generating the highest sales.
+
+**Business Value:** Ensures popular products remain well stocked while supporting promotional strategies around high-demand items.
+
+---
+
+#### 📉 Bottom 10 Products
+**Insight:** Highlights products with consistently low sales.
+
+**Business Value:** Helps management identify products that may require promotional campaigns, menu revisions, or discontinuation to reduce unnecessary inventory costs.
+
+---
+
+#### 🌳 Revenue by Product Type
+**Insight:** Compares revenue across different product types.
+
+**Business Value:** Helps management identify the most profitable product lines and make informed decisions regarding product expansion or menu optimization.
+
+---
+
+#### 🍩 Revenue by Product Category
+**Insight:** Shows revenue contribution by each product category.
+
+**Business Value:** Supports category management by identifying which categories deserve greater marketing focus and inventory investment.
+
+---
+
+#### 🏪 Store vs Product Category Heatmap
+**Insight:** Compares product category performance across different store locations.
+
+**Business Value:** Enables store-specific inventory allocation by ensuring high-demand products are stocked where customers purchase them most frequently, reducing overstocking and stock shortages.
+
+---
+
+# ⏰ Time Analysis
+
+The Time Analysis dashboard examines customer purchasing behaviour throughout the day and week to identify peak trading periods.
+
+### Dashboard Features
+
+- Revenue by Hour
+- Transactions by Hour
+- Revenue by Day of Week
+- Revenue by Time Period
+- Revenue Heatmap (Hour × Day)
+
+### Business Insights & Value
+
+#### 🕒 Revenue by Hour
+**Insight:** Identifies the hours generating the highest revenue.
+
+**Business Value:** Enables managers to schedule additional staff during peak trading hours, reducing customer waiting times and improving service quality.
+
+---
+
+#### 📈 Transactions by Hour
+**Insight:** Shows customer activity throughout the day.
+
+**Business Value:** Helps determine staffing requirements based on customer traffic rather than assumptions.
+
+---
+
+#### 📅 Revenue by Day of Week
+**Insight:** Compares sales performance across weekdays.
+
+**Business Value:** Supports workforce planning and helps management schedule promotions during slower trading days.
+
+---
+
+#### 🌄 Revenue by Time Period
+**Insight:** Compares sales during Morning, Afternoon, and Evening periods.
+
+**Business Value:** Helps identify the most profitable trading periods and supports operational planning and promotional scheduling.
+
+---
+
+#### 🔥 Revenue Heatmap (Hour × Day)
+**Insight:** Highlights the busiest combinations of weekdays and trading hours.
+
+**Business Value:** Enables managers to quickly identify peak demand periods, optimize employee scheduling, and prepare stores for high customer volumes.
+
+---
+
+## 📸 Dashboard Preview
+
+> Dashboard screenshots will be added after completing the final dashboard design.
+
+# 📌 Key Business Recommendations
+
+Based on the analysis, the following recommendations could help improve operational efficiency:
+
+- Increase staffing during peak trading hours to reduce customer waiting times and improve service levels.
+- Allocate inventory based on store-specific product demand to minimize stock shortages and excess inventory.
+- Prioritize high-performing product categories in marketing campaigns and promotional activities.
+- Review low-performing products to determine whether they require promotions, pricing adjustments, or removal from the product portfolio.
+- Continuously monitor monthly sales trends to support demand forecasting and strategic planning.
+- Use the interactive Power BI dashboard as a centralized reporting solution to support data-driven decision-making across store operations.
