@@ -306,12 +306,6 @@ Identifies customer purchasing behaviour and peak trading periods through:
 
 ---
 
-## 📸 Dashboard Preview
-
-> Dashboard screenshots will be added after completing the final dashboard design.
-
----
-
 # 💻 Technologies Used
 
 - Microsoft SQL Server
